@@ -7,7 +7,7 @@ const values = [1, 2, 3, 4, 5];
 
 function App() {
   const [selectedValue, setSelectedValue] = useState<number | null>(null);
-  const [isBeforeSubmit, setIsBeforeSubmit] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(true);
 
   const handleSelectValue = (value: number) => {
     setSelectedValue(value);
@@ -15,14 +15,14 @@ function App() {
 
   return (
     <main>
-      {isBeforeSubmit ? (
+      {isSubmitted ? (
+        <RateCardAfterSubmit selectedValue={selectedValue} />
+      ) : (
         <RateCardBeforeSubmit
           values={values}
           selectedValue={selectedValue}
           handleSelectValue={handleSelectValue}
         />
-      ) : (
-        <RateCardAfterSubmit selectedValue={selectedValue} />
       )}
     </main>
   );
