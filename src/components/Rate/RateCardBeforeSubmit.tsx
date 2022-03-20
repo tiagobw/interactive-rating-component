@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import RateText from './RateText';
 import RateValues from './RateValues';
 
@@ -13,12 +11,14 @@ type RateCardBeforeSubmitProps = {
   values: number[];
   selectedValue: number | null;
   handleSelectValue: (value: number) => void;
+  handleSubmit: () => void;
 };
 
 const RateCardBeforeSubmit = ({
   values,
   selectedValue,
   handleSelectValue,
+  handleSubmit,
 }: RateCardBeforeSubmitProps) => {
   return (
     <article>
@@ -29,7 +29,9 @@ const RateCardBeforeSubmit = ({
         selectedValue={selectedValue}
         handleSelectValue={handleSelectValue}
       />
-      <button type='submit'>SUBMIT</button>
+      <button type='submit' onClick={handleSubmit}>
+        SUBMIT
+      </button>
     </article>
   );
 };

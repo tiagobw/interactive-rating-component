@@ -13,6 +13,10 @@ function App() {
     setSelectedValue(value);
   };
 
+  const handleSubmit = () => {
+    setIsSubmitted(true);
+  };
+
   return (
     <main>
       {isSubmitted ? (
@@ -22,6 +26,7 @@ function App() {
           values={values}
           selectedValue={selectedValue}
           handleSelectValue={handleSelectValue}
+          handleSubmit={handleSubmit}
         />
       )}
     </main>
