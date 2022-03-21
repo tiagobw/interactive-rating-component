@@ -22,8 +22,8 @@ const RateCardBeforeSubmit = ({
   handleSubmit,
 }: RateCardBeforeSubmitProps) => {
   return (
-    <RateCardLayout>
-      <RateText heading={heading} paragraph={paragraph} />
+    <RateCardLayout classNameProps=''>
+      <RateText classNameProps='' heading={heading} paragraph={paragraph} />
       <div className='-order-1 bg-medium-dark-grey self-start p-3 rounded-full mb-6'>
         <IconStar className='scale-90' />
       </div>

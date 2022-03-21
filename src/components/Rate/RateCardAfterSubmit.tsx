@@ -13,10 +13,10 @@ type RateCardAfterSubmitProps = {
 
 const RateCardAfterSubmit = ({ selectedValue }: RateCardAfterSubmitProps) => {
   return (
-    <RateCardLayout>
-      <RateText heading={heading} paragraph={paragraph} />
-      <IllustrationThankYou />
-      <p>{`You selected ${selectedValue} out of 5`}</p>
+    <RateCardLayout classNameProps='py-10'>
+      <RateText classNameProps='text-center' heading={heading} paragraph={paragraph} />
+      <IllustrationThankYou className='-order-2 self-center' />
+      <p className='-order-1 self-center bg-medium-dark-grey text-orange py-2 px-4 my-7 rounded-3xl'>{`You selected ${selectedValue} out of 5`}</p>
     </RateCardLayout>
   );
 };

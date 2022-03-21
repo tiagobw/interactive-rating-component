@@ -7,7 +7,7 @@ const values = [1, 2, 3, 4, 5];
 
 function App() {
   const [selectedValue, setSelectedValue] = useState<number | null>(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(true);
 
   const handleSelectValue = (value: number) => {
     setSelectedValue(value);
