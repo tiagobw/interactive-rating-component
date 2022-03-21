@@ -6,4 +6,14 @@
   html {
     font-family: 'Overpass', sans-serif;
   }
+
+  body {
+    @apply min-h-screen;
+    @apply bg-very-dark-blue;
+  }
+
+  #root {
+    @apply min-h-screen;
+    @apply flex justify-center items-center;
+  }
 }

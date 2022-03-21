@@ -2,6 +2,7 @@ import RateText from './RateText';
 import RateValues from './RateValues';
 
 import { ReactComponent as IconStar } from '../../images/icon-star.svg';
+import RateCardLayout from './RateCardLayout';
 
 const heading = 'How did we do?';
 const paragraph =
@@ -21,18 +22,24 @@ const RateCardBeforeSubmit = ({
   handleSubmit,
 }: RateCardBeforeSubmitProps) => {
   return (
-    <article>
+    <RateCardLayout>
       <RateText heading={heading} paragraph={paragraph} />
-      <IconStar />
+      <div className='-order-1 bg-medium-dark-grey self-start p-3 rounded-full mb-6'>
+        <IconStar className='scale-90' />
+      </div>
       <RateValues
         values={values}
         selectedValue={selectedValue}
         handleSelectValue={handleSelectValue}
       />
-      <button type='submit' onClick={handleSubmit}>
+      <button
+        className='bg-orange text-white hover:bg-white hover:text-orange text-[1rem] tracking-wider rounded-3xl py-2 mb-3'
+        type='submit'
+        onClick={handleSubmit}
+      >
         SUBMIT
       </button>
-    </article>
+    </RateCardLayout>
   );
 };
 

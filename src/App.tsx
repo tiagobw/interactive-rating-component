@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <main>
+    <main className='flex justify-center items-center'>
       {isSubmitted ? (
         <RateCardAfterSubmit selectedValue={selectedValue} />
       ) : (

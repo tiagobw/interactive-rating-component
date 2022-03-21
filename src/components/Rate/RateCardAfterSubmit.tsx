@@ -1,6 +1,7 @@
 import RateText from './RateText';
 
 import { ReactComponent as IllustrationThankYou } from '../../images/illustration-thank-you.svg';
+import RateCardLayout from './RateCardLayout';
 
 const heading = 'Thank you!';
 const paragraph =
@@ -12,11 +13,11 @@ type RateCardAfterSubmitProps = {
 
 const RateCardAfterSubmit = ({ selectedValue }: RateCardAfterSubmitProps) => {
   return (
-    <article>
+    <RateCardLayout>
       <RateText heading={heading} paragraph={paragraph} />
       <IllustrationThankYou />
       <p>{`You selected ${selectedValue} out of 5`}</p>
-    </article>
+    </RateCardLayout>
   );
 };
 

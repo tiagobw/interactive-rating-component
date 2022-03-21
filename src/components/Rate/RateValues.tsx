@@ -12,9 +12,10 @@ const RateValues = ({
   handleSelectValue,
 }: RateValuesProps) => {
   return (
-    <ul>
+    <ul className='flex justify-between my-7'>
       {values.map((value) => (
         <RateValue
+          key={value}
           value={value}
           selectedValue={selectedValue}
           handleSelectValue={handleSelectValue}
