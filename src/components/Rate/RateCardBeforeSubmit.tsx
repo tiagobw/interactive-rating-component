@@ -33,7 +33,8 @@ const RateCardBeforeSubmit = ({
         handleSelectValue={handleSelectValue}
       />
       <button
-        className='bg-orange text-white hover:bg-white hover:text-orange text-[1rem] tracking-wider rounded-3xl py-2 mb-3'
+        disabled={!selectedValue}
+        className='bg-orange text-white disabled:bg-medium-dark-grey disabled:text-light-grey hover:bg-white hover:text-orange text-[1rem] tracking-wider rounded-3xl py-2 mb-3'
         type='submit'
         onClick={handleSubmit}
       >
