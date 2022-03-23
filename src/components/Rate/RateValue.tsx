@@ -12,8 +12,9 @@ const RateValue = ({
   return (
     <li
       className={`flex justify-center items-center text-sm 
-                  h-10 w-10 p-3 rounded-full 
+                  h-[2.7rem] w-[2.7rem] p-3 rounded-full 
                   cursor-pointer hover:bg-orange hover:text-white
+                  md:h-[3.5rem] md:w-[3.5rem]
                   ${
                     selectedValue === value
                       ? 'bg-light-grey text-white'
